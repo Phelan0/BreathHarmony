@@ -1,3 +1,3 @@
-function redirectToMenu() {
-    window.location.href = 'menu.html';
+function redirectToLogin() {
+    window.location.href = 'login.html';
 }

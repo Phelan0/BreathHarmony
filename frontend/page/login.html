@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/login.css">
+    <style>
+        .loading-screen {
+            height: 100%;
+            background-color: #EDDCFF;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .loading-text {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .loading-screen img {
+            width: 100%; 
+        }
+
+        .loading-screen h5 {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading screen -->
+    <div class="loading-screen">
+        <div class="loading-text">
+            <h2>BreathHarmony</h2>
+        </div>
+        <div>
+            <img src="../asset/images/loading.png" alt="">
+        </div>
+        <h5>Find your breath, Find your Peace</h5>
+    </div>
+
+    <!-- Login page-->
+    <div class="login-container" style="display: none;">
+        <div class="login-title">
+            <h1>Willkommen! <br> Melde dich bei BreathHarmony an!</h1>
+        </div>
+        <form id="login-form"> 
+            <div class="login-input">
+                <label for="username">Email</label>
+                <input type="password" id="username" name="username" required>
+            </div>
+            <div class="login-input">
+                <label for="password">Passwort</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="login-btn">
+                <button class="btn" type="submit" onclick="redirectToMenu()">Annmelden</button>
+                <a href="../page/forgot.html">Forgot vergessen?</a>
+                <button class="btn" type="submit" onclick="redirectToRegister()">Registrieren</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../js/login.js"></script>
+</body>
+</html>

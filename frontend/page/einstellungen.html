@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/einstellungen.css">
+</head>
+<body>
+    <div class="einstel-container">
+        <div class="einstel-title">
+            <h1>Einstellungen</h1>
+        </div>
+        <div class="einstel-content">
+            <div class="einstel-list">
+                <p>Personliche Informationen</p>
+                <ul>
+                    <li>Name</li>
+                    <li>Email</li>
+                    <li>Passwort andern</li>
+                </ul>
+            </div>
+            <div class="einstel-list">
+                <p>Benachrichtigungen</p>
+                <ul>
+                    <li>
+                        <label for="email-notifications">E-mail-Benachrichtigungen</label>
+                        <input type="checkbox" id="email-notifications">
+                    </li>
+                    <li>
+                        <label for="push-notifications">Push - Benachrichtigungen</label>
+                        <input type="checkbox" id="push-notifications">
+                    </li>
+                </ul>
+            </div>
+            <div class="einstel-list">
+                <p>Hilfe & Support</p>
+                <ul>
+                    <li>Hilfe</li>
+                    <li>Kontakt-Support</li>
+                    <li>Passwort andern</li>
+                </ul>
+            </div>
+        </div>
+        <div class="einstel-btn">
+            <button class="btn" type="submit" onclick="redirectToMenu()">Abbrechen</button>
+            <button class="btn" type="submit" onclick="redirectToMenu()">Speichern</button>
+        </div>
+    </div>
+
+    <script src="../js/einstel.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+body{
+    background-color: #EDDCFF;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.uber-title {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.uber-item h3 {
+    margin: 0;
+}
+
+.uber-item p {
+    margin: 0;
+}
+
+.line {
+    padding-bottom: 10px;
+}

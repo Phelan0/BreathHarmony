@@ -1,0 +1,43 @@
+body{
+    background-color: #EDDCFF;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.statistik-container{
+    padding: 10px 50px;
+    height: 100vh;
+}
+
+.statistik-content {
+    width: 100%;
+    overflow: auto;
+  }
+
+.statistik-title {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.statistik-btn {
+    display: flex;
+    margin-top: 100px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #9745FF;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background-color: #7633CC;
+}

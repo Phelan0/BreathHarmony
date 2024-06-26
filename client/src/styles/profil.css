@@ -1,0 +1,62 @@
+body{
+    background-color: #EDDCFF;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.profil-container {
+    padding: 10px 50px;
+    text-align: center;
+    height: 100vh;
+}
+
+.profil-title {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.profil-title h1 {
+    margin-top: 0px;
+}
+
+.profil-ava-img img {
+    width: fit-content; 
+    height: 200px;
+}
+
+.profil-item h2{
+    margin: 15px 0;
+    
+}
+
+.profil-desc {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.profil-desc h2 {
+    margin-top: 0;
+}
+
+.abmelden-btn {
+    gap: 10px;
+}
+
+.btn {
+    width: 100%;
+    padding: 15px 0;
+    background-color: #9745FF;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.btn:hover {
+    background-color: #7633CC;
+}

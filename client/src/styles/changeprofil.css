@@ -1,0 +1,75 @@
+body{
+    background-color: #EDDCFF;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.changeprofil-container{
+    padding: 10px 50px;
+    height: 100vh;
+}
+
+.changeprofil-title {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.changeprofil-input label {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.changeprofil-input input {
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    background-color: #f9f9f9;
+    border: none;
+    outline: none;
+    padding: 8px 0;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.changeprofil-age {
+    width: 25%;
+}
+
+.changeprofil-desc {
+    display: flex;
+    gap: 10px;
+}
+
+.changeprofil-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+
+.changeprofil-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #9745FF;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background-color: #7633CC;
+}

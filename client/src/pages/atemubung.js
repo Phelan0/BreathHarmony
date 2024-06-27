@@ -25,7 +25,7 @@ const Atemubung = () => {
   };
 
   const handleStart15Times = () => {
-    setPlayTimes(3);
+    setPlayTimes(15);
     setPlayCount(0);
     if (videoRef.current) {
       videoRef.current.play();
@@ -107,11 +107,11 @@ const Atemubung = () => {
           <div className="start-btn-container">
             <button className="start-btn" type="button"
               style={{ marginBottom: "0px" }}
-              onClick={handleStart}>Starten</button>
+              onClick={handleStart}>Starten (+1)</button>
 
             <button className="start-btn" type="button"
               style={{ marginBottom: "0px" }}
-              onClick={handleStart15Times}>15 Mal Starten</button>
+              onClick={handleStart15Times}>Mehrmals üben (+15)</button>
           </div>
           <div className="checkbox-container">
             <p>Wie fühlst du dich nach der Übung?</p>

@@ -11,9 +11,10 @@ body{
     align-items: center;
     text-align: center;
     height: 100vh;
+    width: 100vw;
 }
 
 .loading-screen img {
-    width: 400px;
-    padding-top: 30%;
+    width: 100%;
+    margin-top: 30%;
 }

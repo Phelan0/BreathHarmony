@@ -22,17 +22,17 @@ const App = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 2500);
 
     return () => clearTimeout(timer); 
   }, []);
 
   return (
-    <ColorProvider>
         <Router>
           {isLoading ? (
             <Loading />
           ) : (
+            <ColorProvider>
             <Routes>
               <Route path="/" element={<Login />} />
               <Route path="/register" element={<Register />} />
@@ -47,10 +47,9 @@ const App = () => {
             <Route path='/changepass' element={<Changepass />} />
             <Route path='/changeprofil' element={<Changeprofil />} />
             </Routes>
+            </ColorProvider>
           )}
         </Router>
-    </ColorProvider>
-    
   );
 }
 

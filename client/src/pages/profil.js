@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import {updateAvatar } from '../services/user'; 
 
 import ava from '../asset/images/avatar.jpg'
 
@@ -18,24 +17,8 @@ const Profile = () => {
     const file = e.target.files[0];
     if (file) {
       setAvatar(URL.createObjectURL(file));
-
       const formData = new FormData();
       formData.append('avatar', file);
-
-      try {
-        const token = localStorage.getItem('token');
-        const config = {
-          headers: {
-            'x-auth-token': token,
-            'Content-Type': 'multipart/form-data',
-          },
-        };
-
-        const response = await updateAvatar(formData, config )
-        setAvatar(response.data.avatarPath); 
-      } catch (error) {
-        console.error('Error uploading file:', error);
-      }
     }
   };
 

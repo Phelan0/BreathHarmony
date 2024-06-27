@@ -1,5 +1,5 @@
 const express = require('express');
-const { register, login, changePassword, getUser, updateUser, updateColor, updateStatistik, getStatistik, getCount } = require('../controllers/UserController');
+const { register, login, changePassword, getUser, updateUser, updateColor, updateStatistik, getStatistik } = require('../controllers/UserController');
 const auth = require('../middleware')
 const router = express.Router();
 
@@ -12,5 +12,4 @@ router.put('/updateuser', auth, updateUser);
 router.put('/updatecolor', auth, updateColor);
 router.put('/updatestatistik', auth, updateStatistik);
 router.get('/getstatistik', auth, getStatistik);
-router.get('/getcount', auth, getCount);
 module.exports = router;

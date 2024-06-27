@@ -147,12 +147,10 @@ exports.updateStatistik = async (req, res) => {
     
     try {
       const userId = req.user.id;
-  
       let user = await User.findById(userId);
       if (!user) {
         return res.status(404).json({ msg: 'User not found' });
       }
-  
       const existingStatistik = user.statistik.find(stat => stat.date.toDateString() === new Date(date).toDateString());
   
       if (existingStatistik) {
@@ -161,13 +159,12 @@ exports.updateStatistik = async (req, res) => {
       } else {
         user.statistik.push({
           date: new Date(date),
-          count: 1, 
+          count: 0, 
           status
         });
       }
   
       user = await user.save();
-  
       return res.status(200).json(user); 
     } catch (error) {
       console.error('Error updating statistik:', error);
@@ -191,22 +188,6 @@ exports.getStatistik = async (req, res) => {
     }
   };
 
-exports.getCount = async (req, res) => {
-      try {
-        const userId = req.user.id; 
-        const user = await User.findById(userId);
-
-        if (!user) {
-            return res.status(404).json({ msg: 'User not found' });
-        }
-
-        res.json({ count: user.statistik.count }); 
-        console.log({ count: user.statistik.count })
-    } catch (err) {
-        console.error(err.message);
-        res.status(500).send('Server error');
-    }
-}
   
 
 

@@ -65,18 +65,6 @@ export const changePassword = async (newPassword) => {
   }
 };
 
-export const updateAvatar = async (formData) => {
-  const token = localStorage.getItem('token');
-  const config = {
-    headers: {
-      'x-auth-token': token,
-      'Content-Type': 'multipart/form-data'
-    }
-  };
-  const response = await axios.put('/updateava', formData, config);
-  return response.data;
-};
-
 export const updateUser = async (userData) => {
   try {
     const token = localStorage.getItem('token'); 

@@ -20,12 +20,12 @@ body{
     background: #ffffff;
     border-radius: .4em;
     width: fit-content;
-    max-width: 300px;
+    max-width: 350px;
     font-family: Arial, sans-serif;
     color: #000000;
-    margin: 0 25px;
+    margin: 0 20px;
     margin-bottom: 10px;
-    font-size: 12px;
+    font-size: x-small;
 }
 
 
@@ -54,6 +54,8 @@ body{
 .atemubung-content{
     align-items: start;
 }
+
+
 
 .checkbox-container p {
     margin-bottom: 0px;
@@ -118,4 +120,22 @@ body{
 
 .btn:hover {
     background-color: #7633CC;
+}
+
+.start-btn-container {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.start-btn {
+    background-color: #9745FF;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+    padding: 10px ;
 }

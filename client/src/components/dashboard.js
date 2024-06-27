@@ -43,9 +43,9 @@ const Dashboard = () => {
     useEffect(() => {
         const fetchStatistikData = async () => {
             try {
-                const token = localStorage.getItem('token'); // Lấy token từ localStorage
+                const token = localStorage.getItem('token'); 
                 if (!token) {
-                    navigate('/login'); // Chuyển hướng đến trang đăng nhập nếu không có token
+                    navigate('/login'); 
                     return;
                 }
 
@@ -54,16 +54,15 @@ const Dashboard = () => {
                         'x-auth-token': token
                     }
                 };
-                const response = await axios.get('http://localhost:5000/api/breath/getstatistik', config); // Gọi API để lấy dữ liệu statistik từ backend
+                const response = await axios.get('http://localhost:5000/api/breath/getstatistik', config); 
                 if (Array.isArray(response.data)) {
                     const filledData = fillMissingData(response.data);
-                    setStatistikData(filledData); // Lưu dữ liệu vào state nếu nó là mảng
+                    setStatistikData(filledData); 
                 } else {
                     console.error('Expected an array but got:', response.data);
                 }
             } catch (error) {
                 console.error('Error fetching statistik:', error);
-                // Xử lý lỗi tại đây (hiển thị thông báo lỗi hoặc thực hiện hành động phù hợp)
             }
         };
 
@@ -73,7 +72,6 @@ const Dashboard = () => {
     useEffect(() => {
         if (statistikData.length === 0) return;
 
-        // Lấy labels và data từ statistikData và định dạng lại ngày
         const labels = statistikData.map(entry => entry.date);
         const data = statistikData.map(entry => entry.count);
 
@@ -88,7 +86,7 @@ const Dashboard = () => {
             data: {
                 labels: labels,
                 datasets: [{
-                    label: 'Số lần',
+                    label: 'Mal pro Tag',
                     data: data,
                     backgroundColor: 'rgba(54, 162, 235, 0.6)',
                     borderColor: 'rgba(54, 162, 235, 1)',

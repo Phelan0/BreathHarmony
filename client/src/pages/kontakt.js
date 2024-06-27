@@ -12,13 +12,13 @@ const Kontakt = () => {
     <div  style={{ backgroundColor }}>
         <div className="kontakt-container" >
             <div className="kontakt-title">
-                <h1>kontakt</h1>
+                <h1>Kontakt</h1>
             </div>
             <div className="kontakt-content">
                 
             </div>
             <div className="kontakt-btn">
-                <button className="btn" type="submit" onClick={() => navigate('/menu')}>Komm zuruck</button>
+                <button className="btn" type="submit" onClick={() => navigate('/menu')}>Komm zurück</button>
             </div>
         </div>
     </div>

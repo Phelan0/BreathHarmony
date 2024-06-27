@@ -1,11 +1,9 @@
 import React from 'react';
 
-import { useColor } from '../ColorContext';
 import '../styles/loading.css'
 
 
 const Loading = () => {
-  const { backgroundColor } = useColor();
   return (
     <div className="loading-screen">
     <div className="loading-text">

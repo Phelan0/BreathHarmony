@@ -35,10 +35,6 @@ body{
     width: 100%;
 }
 
-.changeprofil-age {
-    width: 25%;
-}
-
 .changeprofil-desc {
     display: flex;
     gap: 10px;

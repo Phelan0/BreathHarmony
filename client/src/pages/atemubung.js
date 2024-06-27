@@ -1,5 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+
 import { useColor } from '../ColorContext';
 import axios from 'axios';
 import '../styles/atemubung.css';
@@ -21,11 +24,11 @@ const Atemubung = () => {
 
   const handleSubmit = async (feeling, incrementCount = false) => {
     const feelingToSubmit = feeling || 'no selection';
-    console.log('Submitting feeling:', feelingToSubmit); // Thêm dòng này để kiểm tra giá trị
+    console.log('Submitting feeling:', feelingToSubmit); 
     try {
       const response = await updateStatistik(
         new Date().toISOString(),
-        incrementCount ? 1 : 0, // Mỗi lần video kết thúc là 1 lần
+        incrementCount ? 1 : 0,
         feelingToSubmit
       );
 
@@ -51,9 +54,9 @@ const Atemubung = () => {
 
     const fetchUserData = async () => {
       try {
-        const token = localStorage.getItem('token'); // Lấy token từ localStorage
+        const token = localStorage.getItem('token'); 
         if (!token) {
-          navigate('/'); // Chuyển hướng đến trang đăng nhập nếu không có token
+          navigate('/'); 
           return;
         }
 
@@ -67,27 +70,27 @@ const Atemubung = () => {
         setUserCount(response.data);
       } catch (error) {
         console.error('Error fetching user data:', error);
-        // Xử lý lỗi khi không thể lấy dữ liệu người dùng
+        
       }
     };
 
     fetchUserData();
 
 
-  }, []); // Thêm selectedFeeling vào dependency để useEffect re-run khi thay đổi
+  }, []); 
 
   const handleCheckboxChange = (event) => {
     const newFeeling = event.target.value;
-    console.log('Checkbox selected:', newFeeling); // Thêm dòng này để kiểm tra giá trị
+    console.log('Checkbox selected:', newFeeling); 
     setSelectedFeeling(newFeeling);
-    handleSubmit(newFeeling, false); // Gọi hàm handleSubmit mỗi lần thay đổi cảm giác
+    handleSubmit(newFeeling, false); 
   };
 
   return (
     <div style={{ backgroundColor }}>
       <div className="atemubung-container">
         <div className="atemubung-title">
-          <h1>Atemubung</h1>
+          <h1>Atemübung</h1>
         </div>
         <div className="speech-bubble">
           Hallo, ich bin Andy. Ich bin dein Coach. 
@@ -97,11 +100,19 @@ const Atemubung = () => {
         </div>
         <div className="atemubung-content">
           <div className='vid-container'>
-            {/* <h1>{userCount !== null ? userCount : '0'}</h1> */}
+          <FontAwesomeIcon icon={faUser} className='iconspeak' style={{
+                            marginTop: '5px',
+                            fontSize: '72px',
+                            color: 'white'}}/>
             <video ref={videoRef} width="230" controls={false}>
               <source src={videoSrc} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
+          </div>
+          <div className="atemubung-btn">
+            <button className="btn" type="button" 
+            style={{marginBottom: "0px"}}
+            onClick={handleStart}>Starten</button>
           </div>
           <div className="checkbox-container">
             <p>Wie fühlst du dich nach der Übung?</p>
@@ -121,7 +132,7 @@ const Atemubung = () => {
                 value="normal" 
                 checked={selectedFeeling === 'normal'}
                 onChange={handleCheckboxChange}
-              /> Normal
+              /> Geht so
             </label>
             <label>
               <input 
@@ -135,7 +146,6 @@ const Atemubung = () => {
           </div>
         </div>
         <div className="atemubung-btn">
-          <button className="btn" type="button" onClick={handleStart}>Start</button>
           <button className="btn" type="button" onClick={() => navigate('/menu')}>Komm zurück</button>
         </div>
       </div>

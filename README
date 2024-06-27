@@ -1,0 +1,10 @@
+Frontend: ReactJS 
+Backend: NodeJS 
+Database: MongoDB
+
+Ausführen der Anwendung: 
+Schritt 1: Öffnen Sie MongoDB
+Schritt 1: Terminal öffnen und 'cd server' eingeben 
+Schritt 2: Code 'npm run dev' 
+Schritt 3: Öffnen Sie ein neues Terminal und geben Sie den Code 'cd client' ein. 
+Schritt 4: Code 'npm start'

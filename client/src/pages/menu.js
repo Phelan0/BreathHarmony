@@ -18,23 +18,23 @@ const Menu = () => {
   return (
     <div className="menu-container"  style={{ backgroundColor }}>
         <div className="menu-title">
-            <h2>Menu</h2>
+            <h1>Menü</h1>
         </div>
         <div className="menu-list">
             <div className="item" onClick={() => navigate('/atemubung')}>
-                <FontAwesomeIcon icon={faLungs} className='icon'/> Atemubngen
+                <FontAwesomeIcon icon={faLungs} className='icon'/> Atemübung
             </div>
             <div className="item" onClick={() => navigate('/statistik')}>
                 <FontAwesomeIcon icon={faChartColumn} className='icon'/> Statistik
             </div>
             <div className="item" onClick={() => navigate('/profil')}>
-                <FontAwesomeIcon icon={faUser} className='icon'/> Profil
+                <FontAwesomeIcon icon={faUser} className='icon'/> Mein Profil
             </div>
             <div className="item" onClick={() => navigate('/einstellungen')}>
                 <FontAwesomeIcon icon={faGear} className='icon'/> Einstellungen
             </div>
             <div className="item" onClick={() => navigate('/uber')}>
-                <FontAwesomeIcon icon={faCircleExclamation} className='icon'/> Uber uns
+                <FontAwesomeIcon icon={faCircleExclamation} className='icon'/> Über uns
             </div>
             <div className="item" onClick={() => navigate('/kontakt')}>
                 <FontAwesomeIcon icon={faAddressBook} className='icon'/> Kontakt

@@ -14,13 +14,13 @@ const Statistik = () => {
         <div className="statistik-container">
             <div className="statistik-title">
                 <h1>Statistik</h1>
-                <p>Số lần tập luyện 7 ngày gần nhất</p>
+                <p>Statistik in den letzten 7 Tagen</p>
             </div>
             <div className="statistik-content">
                 <Dashboard />
-            </div>
+            </div> 
             <div className="statistik-btn">
-                <button className="btn" type="submit" onClick={() => navigate('/menu')}>Komm zuruck</button>
+                <button className="btn" type="submit" onClick={() => navigate('/menu')}>Komm zurück</button>
             </div>
         </div>
     </div>

@@ -13,20 +13,22 @@ body{
 .atemubung-title {
     margin-bottom: 20px;
     text-align: center;
+    margin-top: 0px;
 }
 .speech-bubble {
     position: relative;
     background: #ffffff;
     border-radius: .4em;
-    padding: 10px;
     width: fit-content;
     max-width: 300px;
     font-family: Arial, sans-serif;
     color: #000000;
-    margin-bottom: 20px;
-    font-size: x-small;
-    margin-right: 60px;
+    margin: 0 25px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    /* font-size: x-small; */
 }
+
 
 .speech-bubble::after {
     position: absolute;
@@ -46,12 +48,12 @@ body{
     border-top-color: #ffffff;
     border-bottom: 0;
     border-left: 0;
-    margin-left: -7.5px;
+    margin-left: 10px;
     margin-bottom: -15px;
 }
 
 .atemubung-content{
-    text-align: center;
+    align-items: start;
 }
 
 .checkbox-container p {
@@ -90,7 +92,6 @@ body{
 .vid-container{
     justify-content: center;
     display: flex;
-    align-items: center;
     gap: 15px;
 }
 

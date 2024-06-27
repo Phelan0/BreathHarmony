@@ -51,7 +51,7 @@ const Edit = () => {
     <div style={{ backgroundColor }}>
       <div className="kontakt-container">
         <div className="kontakt-title">
-          <h1>Change Background Color</h1>
+          <h1>Hintergrundfarbe ändern</h1>
         </div>
         <div className="kontakt-content">
           <button className="blue" onClick={setBlueBackground}>Blue</button>

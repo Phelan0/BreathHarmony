@@ -32,7 +32,7 @@ const Profile = () => {
         };
 
         const response = await updateAvatar(formData, config )
-        setAvatar(response.data.avatarPath); // Cập nhật avatar với đường dẫn mới từ server
+        setAvatar(response.data.avatarPath); 
       } catch (error) {
         console.error('Error uploading file:', error);
       }
@@ -42,9 +42,9 @@ const Profile = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const token = localStorage.getItem('token'); // Lấy token từ localStorage
+        const token = localStorage.getItem('token'); 
         if (!token) {
-          navigate('/'); // Chuyển hướng đến trang đăng nhập nếu không có token
+          navigate('/'); 
           return;
         }
 
@@ -57,16 +57,15 @@ const Profile = () => {
         setUserData(response.data);
       } catch (error) {
         console.error('Error fetching user data:', error);
-        // Xử lý lỗi khi không thể lấy dữ liệu người dùng
       }
     };
 
     fetchUserData();
-  }, [navigate]); // Chỉ gọi một lần khi component mount
+  }, [navigate]); 
 
   const handleLogout = () => {
-    localStorage.removeItem('token'); // Xóa token khỏi localStorage
-    navigate('/'); // Chuyển hướng đến trang đăng nhập sau khi đăng xuất
+    localStorage.removeItem('token'); 
+    navigate('/'); 
   };
 
   const calculateAge = (birthdate) => {
@@ -75,7 +74,6 @@ const Profile = () => {
     let age = today.getFullYear() - birthDate.getFullYear();
     const monthDifference = today.getMonth() - birthDate.getMonth();
 
-    // Kiểm tra nếu ngày sinh chưa tới trong năm nay thì trừ 1 tuổi
     if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
       age--;
     }
@@ -84,7 +82,7 @@ const Profile = () => {
   };
 
   if (!userData) {
-    return <div>Loading...</div>; // Hiển thị loading khi đang lấy dữ liệu
+    return <div>Loading...</div>; 
   }
 
   return (
@@ -126,18 +124,18 @@ const Profile = () => {
             <h2>Benutzername: <span>{userData.username}</span></h2>
           </div>
           <div className="profil-item">
-            <h2>Age: <span>{calculateAge(userData.age)}</span></h2>
+            <h2>Alter: <span>{calculateAge(userData.age)}</span></h2>
           </div>
           <div className="profil-item">
             <h2>Körperzustand</h2>
             <div className='profil-desc'>
-              <h2>Weight: <span>{userData.weight}</span> (kg)</h2>
-              <h2>Height: <span>{userData.height}</span> (cm)</h2>
+              <h2>Gewicht: <span>{userData.weight}</span> (kg)</h2>
+              <h2>Größe: <span>{userData.height}</span> (cm)</h2>
             </div>
           </div>
         </div>
         <div className="abmelden-btn">
-          <button className="btn" type="button" onClick={handleLogout}>Logout</button>
+          <button className="btn" type="button" onClick={handleLogout}>Abmelden</button>
           <button className="btn" type="button" onClick={() => navigate('/menu')}>Komm zurück</button>
         </div>
       </div>

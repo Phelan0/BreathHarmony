@@ -6,25 +6,30 @@ body{
 }
 
 .uber-container{
-    padding-top: 40px;
+    padding-top: 20px;
     height: 100vh;
+    margin: 0 20px;
 }
 
-.uber-title {
+.uber-title h1{
     margin-bottom: 20px;
     text-align: center;
+    margin-top: 0px;
 }
 
 .uber-item h3 {
+    margin-bottom: 10px;
     margin: 0;
 }
 
-.uber-item p {
-    margin: 0;
+.uber-item h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .line {
     padding-bottom: 10px;
+    margin: 0;
 }
 
 

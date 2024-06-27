@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { register, login, getUser } from '../services/user'; // Đảm bảo đường dẫn này đúng
+import { register, login, getUser } from '../services/user'; 
 import { useColor } from '../ColorContext';
 import '../styles/register.css';
 
@@ -27,7 +27,6 @@ const Register = () => {
     e.preventDefault();
     const { username, password, age, weight, height } = formData;
 
-    // Kiểm tra các điều kiện hợp lệ
     if (weight < 1 || height < 1) {
       setError('Weight and Height must be greater than 0.');
       return;
@@ -42,14 +41,14 @@ const Register = () => {
     try {
       await register(username, password, age, weight, height);
       const token = await login(username, password);
-      localStorage.setItem('token', token); // Lưu token vào localStorage
-      const userData = await getUser(); // Lấy thông tin người dùng từ backend sau khi đăng nhập
-      const userBackgroundColor = userData.color || '#EDDCFF'; // Lấy màu nền của người dùng từ dữ liệu trả về
-      changeBackgroundColor(userBackgroundColor); // Cập nhật màu nền cho người dùng
+      localStorage.setItem('token', token); 
+      const userData = await getUser(); 
+      const userBackgroundColor = userData.color || '#EDDCFF'; 
+      changeBackgroundColor(userBackgroundColor); 
       navigate('/menu');
     } catch (error) {
       console.error(error);
-      setError('An error occurred during registration.'); // Xử lý thông báo lỗi cho người dùng
+      setError('An error occurred during registration.'); 
     }
   };
 
@@ -60,7 +59,7 @@ const Register = () => {
       </div>
       <form id="register-form" onSubmit={handleRegister}> 
         <div className="register-input">
-          <label htmlFor="username">Name</label>
+          <label htmlFor="username">Benutzername</label>
           <input
             type="text"
             id="username"
@@ -81,9 +80,8 @@ const Register = () => {
             required
           />
         </div>
-        <div className="register-desc">
-          <div className="register-input register-age">
-            <label htmlFor="age">Age</label>
+        <div className="register-input">
+            <label htmlFor="age">Alter</label>
             <input
               type="date"
               id="age"
@@ -94,8 +92,9 @@ const Register = () => {
               required
             />
           </div>
+        <div className="register-desc">
           <div className="register-input">
-            <label htmlFor="weight">Weight</label>
+            <label htmlFor="weight">Gewicht (kg)</label>
             <input
               type="number"
               id="weight"
@@ -107,7 +106,7 @@ const Register = () => {
             />
           </div>
           <div className="register-input">
-            <label htmlFor="height">Height</label>
+            <label htmlFor="height">Größe (cm)</label>
             <input
               type="number"
               id="height"
@@ -122,10 +121,10 @@ const Register = () => {
         {error && <div className="error-message">{error}</div>}
         <div className="register-btn">
           <button className="btn" type="submit">
-            Register
+          Registrieren
           </button>
           <button className="btn" type="button" onClick={() => navigate('/')}>
-            Back to Login
+          Zurück zur Anmeldung
           </button>
         </div>
       </form>

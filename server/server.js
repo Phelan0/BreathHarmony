@@ -6,14 +6,11 @@ const authMiddleware = require('./middleware');
 
 const app = express();
 
-// Connect Database
 connectDB();
 
-// Init Middleware
 app.use(bodyParser.json());
-app.use(cors()); // Enable CORS
+app.use(cors()); 
 
-// Define Routes
 const userRoutes = require('./routes/UserRoutes');
 app.use('/api/breath', userRoutes);
 

@@ -1,0 +1,19 @@
+body{
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.loading-screen{
+    background-color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.loading-screen img {
+    width: 400px;
+    padding-top: 30%;
+}

@@ -2,15 +2,14 @@ import axios from 'axios';
 
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api/breath', // Thay đổi URL này cho phù hợp với URL của backend của bạn
+  baseURL: 'http://localhost:5000/api/breath', 
   headers: {
     'Content-Type': 'application/json',
-    'x-auth-token': localStorage.getItem('token'), // Lấy token từ localStorage sau khi đăng nhập
+    'x-auth-token': localStorage.getItem('token'), 
   },
 });
 
 
-// Thêm interceptor cho request để thêm token vào header
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
   if (token) {
@@ -21,13 +20,12 @@ api.interceptors.request.use((config) => {
   return Promise.reject(error);
 });
 
-// Thêm interceptor cho response để kiểm tra mã phản hồi
 api.interceptors.response.use((response) => {
   return response;
 }, (error) => {
   if (error.response && error.response.status === 401) {
     localStorage.removeItem('token');
-    window.location.href = '/login'; // Chuyển hướng đến trang đăng nhập
+    window.location.href = '/login'; 
   }
   return Promise.reject(error);
 });
@@ -54,7 +52,7 @@ export const register = async (username, password, age, weight, height) => {
 
 export const changePassword = async (newPassword) => {
   try {
-    const token = localStorage.getItem('token'); // Lấy token từ localStorage
+    const token = localStorage.getItem('token'); 
     const config = {
       headers: {
         'x-auth-token': token,
@@ -81,7 +79,7 @@ export const updateAvatar = async (formData) => {
 
 export const updateUser = async (userData) => {
   try {
-    const token = localStorage.getItem('token'); // Lấy token từ localStorage
+    const token = localStorage.getItem('token'); 
     const config = {
       headers: {
         'x-auth-token': token,
@@ -96,7 +94,7 @@ export const updateUser = async (userData) => {
 
 export const getUser = async () => {
   try {
-    const token = localStorage.getItem('token'); // Lấy token từ localStorage
+    const token = localStorage.getItem('token'); 
     const config = {
       headers: {
         'x-auth-token': token,
@@ -112,7 +110,7 @@ export const getUser = async () => {
 
 export const updateStatistik = async (date, count, status) => {
   try {
-    const token = localStorage.getItem('token'); // Lấy token từ localStorage
+    const token = localStorage.getItem('token'); 
     const config = {
       headers: {
         'x-auth-token': token,
@@ -132,16 +130,16 @@ export const updateStatistik = async (date, count, status) => {
 
 export const getStatistik = async () => {
   try {
-    const token = localStorage.getItem('token'); // Lấy token từ localStorage
+    const token = localStorage.getItem('token'); 
     const config = {
       headers: {
         'x-auth-token': token,
       },
     };
-    const response = await axios.get('/getstatistik', config); // Thay đổi đường dẫn phù hợp với endpoint của bạn
+    const response = await axios.get('/getstatistik', config); 
     return response.data;
   } catch (error) {
     console.error('Error fetching statistik:', error);
-    throw error.response.data; // Ném lỗi để component gọi hàm này có thể xử lý
+    throw error.response.data; 
   }
 };

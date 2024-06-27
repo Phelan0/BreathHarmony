@@ -1,19 +1,13 @@
 import React from 'react';
 
 import '../styles/loading.css'
-
+import logo from '../asset/images/logo.png'
 
 const Loading = () => {
   return (
     <div className="loading-screen">
-    <div className="loading-text">
-        <h2>BreathHarmony</h2>
+        <img src={logo}/>
     </div>
-    <div>
-        
-    </div>
-    <h5>Find your breath, Find your Peace</h5>
-</div>
   );
 }
 

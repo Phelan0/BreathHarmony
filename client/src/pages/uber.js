@@ -14,24 +14,25 @@ const Uber = () => {
             <h1>Über uns</h1>
         </div>
         <div className="uber-content">
-            <div className="uber-list">
-                <div className="uber-item">
-                    <h3>Lerne mehr über Breath Harmony 
-                    Unser Unternehmen bietet Atemübungen zur Stressbewältigung.</h3>
+            <div className="uber-list" style={{textAlign: 'center'}}>
+                <div className="uber-item"  >
+                    <h3>Lerne mehr über BreathHarmony</h3>
+                    <h4>Unser Unternehmen bietet Atemübung zur Stressbewältigung.</h4>
                     <p className="line">..............................................................................................</p>
                 </div>
                 <div className="uber-item">
-                    <h3>Mission und Vision 
-                    Unsere Mission ist es, Menschen zu helfen, Stress durch effektive Atemübungen zu reduzieren. 
-                    Wir streben danach, die weltweit führende Plattform für Stressbewältigung durch Atemübungen zu sein. </h3>
+                    <h3>Mission und Vision</h3>
+                    <h4>Unsere Mission ist es, Menschen zu helfen, Stress durch effektive Atemübung zu reduzieren. 
+                    Wir streben danach, die weltweit führende Plattform für Stressbewältigung durch Atemübung zu sein. </h4>
                     <p className="line">..............................................................................................</p>
                 </div>
                 <div className="uber-item">
-                    <h3>Unser Team Olga Mujinga Louisa von Rüden: </h3>
-                    <h4>Anna Kouame</h4>
-                    <h4>Gloria Omane</h4>
-                    <h4>Kyerewaah</h4>
+                    <h3>Unser Team</h3>
                     <h4>Phuong Le</h4>
+                    <h4>Olga Mujinga</h4>
+                    <h4>Louisa von Rüden</h4>
+                    <h4>Anna Kouame</h4>
+                    <h4>Gloria Omane Kyerewaah</h4>
                     <p className="line">..............................................................................................</p>
                 </div>
                 <div className="uber-item">

@@ -26,14 +26,13 @@ body{
     margin: 0 25px;
     margin-bottom: 10px;
     font-size: 12px;
-    /* font-size: x-small; */
 }
 
 
 .speech-bubble::after {
     position: absolute;
     top: 0;
-    left: -30px; /* Adjust based on your design */
+    left: -30px; 
     font-size: 1.5em;
 }
 

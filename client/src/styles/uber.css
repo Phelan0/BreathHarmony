@@ -8,7 +8,7 @@ body{
 .uber-container{
     padding-top: 20px;
     height: 100vh;
-    margin: 0 20px;
+    padding: 0 20px;
 }
 
 .uber-title h1{

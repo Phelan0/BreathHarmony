@@ -16,6 +16,13 @@ body{
     text-align: center;
 }
 
+.kontakt-item {
+    margin-bottom: 50px;
+}
+.kontakt-item h3 {
+    margin: 10px;
+}
+
 .kontakt-btn {
     display: flex;
     margin-top: 5px;

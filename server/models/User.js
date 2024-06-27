@@ -1,4 +1,3 @@
-// Trong file models/User.js
 
 const mongoose = require('mongoose');
 
@@ -42,7 +41,7 @@ const UserSchema = new mongoose.Schema({
   color: {
     type: String
   },
-  statistik: [StatistikSchema] // Mảng chứa các dữ liệu statistik
+  statistik: [StatistikSchema] 
 });
 
 module.exports = mongoose.model('User', UserSchema);

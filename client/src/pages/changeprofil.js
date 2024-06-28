@@ -116,7 +116,7 @@ const Changeprofil = () => {
             {error && <div className="error-message">{error}</div>}
             <div className="changeprofil-btn">
               <button className="btn" type="submit">Aktualisieren</button>
-              <button className="btn" type="button" onClick={() => navigate('/einstellungen')}>Komm zurück</button>
+              <button className="btn" type="button" onClick={() => navigate('/einstellungen')}>Zurück</button>
             </div>
           </form>
         </div>

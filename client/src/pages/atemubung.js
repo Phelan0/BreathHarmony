@@ -145,7 +145,7 @@ const Atemubung = () => {
           </div>
         </div>
         <div className="atemubung-btn">
-          <button className="btn" type="button" onClick={() => navigate('/menu')}>Komm zurück</button>
+          <button className="btn" type="button" onClick={() => navigate('/menu')}>Zurück</button>
         </div>
       </div>
     </div>

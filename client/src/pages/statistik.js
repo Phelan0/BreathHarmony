@@ -20,7 +20,7 @@ const Statistik = () => {
                 <Dashboard />
             </div> 
             <div className="statistik-btn">
-                <button className="btn" type="submit" onClick={() => navigate('/menu')}>Komm zurück</button>
+                <button className="btn" type="submit" onClick={() => navigate('/menu')}>Zurück</button>
             </div>
         </div>
     </div>

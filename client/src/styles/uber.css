@@ -14,7 +14,8 @@ body{
 .uber-title h1{
     margin-bottom: 20px;
     text-align: center;
-    margin-top: 0px;
+    padding-top: 20px;
+    margin-top: 0; 
 }
 
 .uber-item h3 {

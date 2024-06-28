@@ -66,7 +66,7 @@ const Edit = () => {
           <button className="default" onClick={resetBackground}>Default</button>
         </div>
         <div className="kontakt-btn">
-          <button className="btn" type="submit" onClick={() => navigate('/einstellungen')}>Komm zurück</button>
+          <button className="btn" type="submit" onClick={() => navigate('/einstellungen')}>Zurück</button>
         </div>
       </div>
     </div>

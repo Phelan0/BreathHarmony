@@ -119,7 +119,7 @@ const Profile = () => {
         </div>
         <div className="abmelden-btn">
           <button className="btn" type="button" onClick={handleLogout}>Abmelden</button>
-          <button className="btn" type="button" onClick={() => navigate('/menu')}>Komm zurück</button>
+          <button className="btn" type="button" onClick={() => navigate('/menu')}>Zurück</button>
         </div>
       </div>
     </div>

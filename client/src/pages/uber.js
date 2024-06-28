@@ -17,13 +17,13 @@ const Uber = () => {
             <div className="uber-list" style={{textAlign: 'center'}}>
                 <div className="uber-item"  >
                     <h3>Lerne mehr über BreathHarmony</h3>
-                    <h4>Unser Unternehmen bietet Atemübung zur Stressbewältigung.</h4>
+                    <h4>Unser Unternehmen bietet eine Atemübung zur Stressbewältigung.</h4>
                     <p className="line">..............................................................................................</p>
                 </div>
                 <div className="uber-item">
                     <h3>Mission und Vision</h3>
-                    <h4>Unsere Mission ist es, Menschen zu helfen, Stress durch effektive Atemübung zu reduzieren. 
-                    Wir streben danach, die weltweit führende Plattform für Stressbewältigung durch Atemübung zu sein. </h4>
+                    <h4>Unsere Mission ist es, Menschen zu helfen, Stress durch eine effektive Atemübung zu reduzieren. 
+                    Wir streben danach, die weltweit führende Plattform für Stressbewältigung durch eine Atemübung zu sein. </h4>
                     <p className="line">..............................................................................................</p>
                 </div>
                 <div className="uber-item">
@@ -42,7 +42,7 @@ const Uber = () => {
             </div>
         </div>
         <div className="uber-btn">
-            <button className="btn" type="submit" onClick={() => navigate('/menu')}>Komm zurück</button>
+            <button className="btn" type="submit" onClick={() => navigate('/menu')}>Zurück</button>
         </div>
     </div>
   );

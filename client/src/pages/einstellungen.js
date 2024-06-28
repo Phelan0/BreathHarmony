@@ -20,7 +20,7 @@ const Einstellungen = () => {
                 <div className="item" onClick={() => navigate('/changeprofil')}>Profil ändern</div>
             </div>
             <div className="einstellungen-btn">
-                <button className="btn" type="submit" onClick={() => navigate('/menu')}>Komm zurück</button>
+                <button className="btn" type="submit" onClick={() => navigate('/menu')}>Zurück</button>
             </div>
         </div>
     </div>

@@ -48,7 +48,7 @@ const Changepass = () => {
             {error && <div className="error-message">{error}</div>}
             <div className="changepass-btn">
               <button className="btn" type="submit">Aktualisieren</button>
-              <button className="btn" type="button" onClick={handleChangepassClick}>Komm zurück</button>
+              <button className="btn" type="button" onClick={handleChangepassClick}>Zurück</button>
             </div>
           </form>
         </div>

@@ -17,9 +17,8 @@ const Kontakt = () => {
             <div className="kontakt-content">
             <div className="kontakt-list"  style={{textAlign: 'center'}}>
                 <div className="kontakt-item">
-                    <h3>Haben Sie noch Fragen oder benötigen Sie Unterstützung? </h3>
-                    <h3>Dann kontaktieren Sie uns per E-Mail oder rufen Sie uns während der Öffnungszeiten
-                    an. </h3>
+                    <h3>Hast du noch Fragen oder benötigst du Unterstützung?</h3>
+                    <h3>Zu erreichen sind wir jederzeit per E-Mail und während den Öffnungszeiten auch telefonisch.</h3>
                 </div>
                 <div className="kontakt-item">
                     <h3>Kontaktinformationen: </h3>
@@ -31,7 +30,7 @@ const Kontakt = () => {
             </div>
             </div>
             <div className="kontakt-btn">
-                <button className="btn" type="submit" onClick={() => navigate('/menu')}>Komm zurück</button>
+                <button className="btn" type="submit" onClick={() => navigate('/menu')}>Zurück</button>
             </div>
         </div>
     </div>

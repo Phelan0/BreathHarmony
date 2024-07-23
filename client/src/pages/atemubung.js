@@ -80,7 +80,7 @@ const Atemubung = () => {
     <div style={{ backgroundColor }}>
       <div className="atemubung-container">
         <div className="atemubung-title">
-          <h1>Atemübung</h1>
+          <h1>Stress Management</h1>
         </div>
         <div className="speech-bubble">
           Hallo! Ich bin Harmony, dein Coach.<br/>
@@ -145,7 +145,7 @@ const Atemubung = () => {
           </div>
         </div>
         <div className="atemubung-btn">
-          <button className="btn" type="button" onClick={() => navigate('/menu')}>Zurück</button>
+          <button className="btn" type="button" onClick={() => navigate('/menu2')}>Zurück</button>
         </div>
       </div>
     </div>

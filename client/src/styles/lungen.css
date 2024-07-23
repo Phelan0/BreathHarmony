@@ -1,0 +1,83 @@
+body {
+    background-color: #EDDCFF;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.lungen-container {
+    padding-top: 20px;
+    height: 100vh;
+    padding: 0 20px;
+}
+
+.lungen-title h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 0; 
+}
+
+.lungen-speech-bubble {
+    position: relative;
+    background: #ffffff;
+    border-radius: .4em;
+    width: fit-content;
+    font-family: Arial, sans-serif;
+    color: #000000;
+    margin: 30px 10px;
+}
+
+.checkbox-container p {
+    margin-bottom: 0px;
+}
+
+.checkbox-container label {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #ffffff;
+    border: 2px solid #010101;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    margin-right: 10px;
+}
+
+.checkbox-container input[type="radio"]:checked::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #9745FF;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+
+.lungen-btn {
+    margin: 0 50px;
+    margin-top: 20px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #9745FF;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background-color: #7633CC;
+}

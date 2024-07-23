@@ -15,6 +15,10 @@ import Loading from './components/loading';
 import Edit from './pages/editcolor';
 import Changepass from './pages/changepass';
 import Changeprofil from './pages/changeprofil';
+import Schlaf from './pages/schlaf';
+import Menu2 from './pages/menu2';
+import Lungen from './pages/lungen';
+import Herz from './pages/herz';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -46,6 +50,11 @@ const App = () => {
             <Route path='/color' element={<Edit />} />
             <Route path='/changepass' element={<Changepass />} />
             <Route path='/changeprofil' element={<Changeprofil />} />
+            <Route path='/menu2' element={<Menu2 />} />
+            <Route path='/schlaf' element={<Schlaf />} />
+            <Route path='/lungen' element={<Lungen />} />
+            <Route path='/herz' element={<Herz />} />
+          
             </Routes>
             </ColorProvider>
           )}

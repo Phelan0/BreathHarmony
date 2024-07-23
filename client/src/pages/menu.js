@@ -21,7 +21,7 @@ const Menu = () => {
             <h1>Menü</h1>
         </div>
         <div className="menu-list">
-            <div className="item" onClick={() => navigate('/atemubung')}>
+            <div className="item" onClick={() => navigate('/menu2')}>
                 <FontAwesomeIcon icon={faLungs} className='icon'/> Atemübung
             </div>
             <div className="item" onClick={() => navigate('/statistik')}>

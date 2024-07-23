@@ -14,7 +14,7 @@ const Menu2 = () => {
   return (
     <div className="menu2-container"  style={{ backgroundColor }}>
         <div className="menu2-title">
-            <h1>Atemübung</h1>
+            <h1>Atemübungen</h1>
         </div>
         <div style={{display: 'flex', margin: '0 20px'}}>
             <FontAwesomeIcon icon={faUser} className='iconspeak' style={{

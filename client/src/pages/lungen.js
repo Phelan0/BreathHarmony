@@ -27,7 +27,6 @@ const Lungen = () => {
           marginTop: '30%'
         }} />
         <div className='lungen-speech-bubble'>
-        You sent
         Es geht um die Rippenstreckung-Technik, die dir hilft, deine Lunge zu verbessern. <br/><br/>
 
         Für diese Übung stehst du aufrecht und atmest aus, bis deine Lungen leer sind. 
